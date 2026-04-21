@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For You ❤️</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            color: #333;
+        }
+
+        h1 {
+            margin-top: 50px;
+        }
+
+        button {
+            padding: 15px 25px;
+            margin: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: #ff6b81;
+            color: white;
+        }
+
+        #message {
+            margin-top: 30px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Hey You Rejith(Raaju baai)❤️</h1>
+<p>Click based on your mood 👇</p>
+
+<button onclick="showMessage('sad')">Sad 😢</button>
+<button onclick="showMessage('stress')">Stressed 😣</button>
+<button onclick="showMessage('angry')">Angry 😡</button>
+<button onclick="showLove()">Surprise ❤️</button>
+
+<div id="message"></div>
+
+<script>
+function showMessage(mood) {
+    let msg = "";
+
+    if (mood === "sad") {
+        msg = "Hey… I’m always here for you ❤️ You are stronger than you think!";
+    } 
+    else if (mood === "stress") {
+        msg = "Take a deep breath 😌 Everything will be okay. I believe in you!";
+    } 
+    else if (mood === "angry") {
+        msg = "Calm down 😄 Come talk to me… I’ll make it better ❤️";
+    }
+
+    document.getElementById("message").innerText = msg;
+}
+
+function showLove() {
+    const messages = [
+        "I’m so lucky to have you ❤️",
+        "You make my world better 🌍",
+        "No matter what, I’m with you 💕",
+        "You are my favorite person 😍",
+        "We will get through everything together 💪❤️"
+    ];
+
+    let random = Math.floor(Math.random() * messages.length);
+    document.getElementById("message").innerText = messages[random];
+}
+</script>
+<button onclick="surprise()">Click Me 🎁</button>
+
+<script>
+function surprise() {
+    alert("You are the best thing in my life ❤️");
+}
+</script>
+
+</body>
+</html>
